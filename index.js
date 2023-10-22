@@ -63,5 +63,4 @@ function generateLinksToNotes(titleAndPathForNotes) {
     LG.log(logMessage);
     console.log(logMessage);
   }
-
 })();
