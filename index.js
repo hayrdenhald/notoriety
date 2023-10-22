@@ -2,8 +2,8 @@ import fs from "fs";
 import * as FM from "./FM.js";
 import * as LG from "./LG.js";
 
-const outputFolderPath = "./public/site";
-const outputPath = "./public/site/index.html";
+const outputFolderPath = "./web_notes";
+const outputPath = "./index.html";
 const inputPath = "./input.md";
 
 function initOutputFolder() {
