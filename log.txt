@@ -1,1 +1,5 @@
 [ 22/10/23, 13:27:23 ]: Wrote hollering in december to ./public/site/index.html.
+[ 22/10/23, 15:24:26 ]: Wrote  to ./index.html.
+[ 22/10/23, 15:24:47 ]: Wrote  to ./index.html.
+[ 22/10/23, 15:25:19 ]: Wrote  to ./index.html.
+[ 22/10/23, 15:25:58 ]: Wrote <a href="notes\straggler.md">straggler.md</a>,<a href="notes\python\venv.md">venv.md</a>,<a href="notes\python\test.md">test.md</a>,<a href="notes\csharp\typing.md">typing.md</a> to ./index.html.

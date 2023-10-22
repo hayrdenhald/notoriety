@@ -1,9 +1,13 @@
 import fs from "fs";
 import path from "path";
 const root = "notes";
+const webRoot = "web_notes";
 
 
 async function dfs(root) {
+  const links = [];
+
+  // const stack = [{ vertex: root, indent: 0 }];
   const stack = [{ vertex: root, indent: 0 }];
   const visited = new Set();
 
@@ -17,6 +21,12 @@ async function dfs(root) {
 
       if (stats.isFile()) {
         console.log(`${"  ".repeat(indent)}📰 ${onlyFileName(vertex)}`);
+        const link = {
+          path: vertex,
+          fileName: onlyFileName(vertex),
+          title: onlyFileName(vertex),
+        };
+        links.push(link);
       } else {
         console.log(`${"  ".repeat(indent)}📁 ${onlyFileName(vertex)}`);
         const files = await fs.readdirSync(vertex);
@@ -26,6 +36,8 @@ async function dfs(root) {
       }
     }
   }
+
+  return links;
 }
 
 function onlyFileName(path) {
@@ -33,4 +45,6 @@ function onlyFileName(path) {
   return path.slice(index + 1);
 }
 
-await dfs(root, 0);
+export async function getLinks() {
+  return await dfs(root, 0);
+}
